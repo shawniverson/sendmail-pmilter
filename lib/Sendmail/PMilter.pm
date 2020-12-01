@@ -657,7 +657,7 @@ sub ithread_dispatcher {
 
 	my $nchildren = 0;
 
-	threads::shared::share($nchildren);
+	threads::shared::share(\$nchildren);
 
 	sub {
 		my $this = shift;
